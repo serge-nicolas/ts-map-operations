@@ -2,32 +2,33 @@
   "compilerOptions": {
     "target": "ES2023",
     "useDefineForClassFields": true,
-    "module": "ESNext",
+    "module": "Node16",
     "lib": ["ES2023", "DOM", "DOM.Iterable"],
-    "types": ["vite/client"],
     "skipLibCheck": true,
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
 
     /* Bundler mode */
-    "moduleResolution": "bundler",
-    "allowImportingTsExtensions": true,
-    "verbatimModuleSyntax": true,
+    "moduleResolution": "nodenext",
+    // "allowImportingTsExtensions": true,
+
     "moduleDetection": "force",
-    "noEmit": true,
+    // "noEmit": true,
 
     /* Linting */
     "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "erasableSyntaxOnly": true,
+    "erasableSyntaxOnly": false,
     "noFallthroughCasesInSwitch": true,
     "noUncheckedSideEffectImports": true,
     "paths": {
       "@/*": ["./lib/*"],
       "@root": ["./"],
     },
-
-    "include": ["**/*.ts"],
   },
+  "outDir": "./dist",
+  "include": ["./lib/InmapClass/index.ts"],
+  "sourceMap": true,
+  "inlineSources": true,
 }

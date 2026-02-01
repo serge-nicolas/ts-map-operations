@@ -1,5 +1,5 @@
 export function catchError(
-  target: any,
+  _: any,
   propertyKey: string,
   descriptor: PropertyDescriptor,
 ) {

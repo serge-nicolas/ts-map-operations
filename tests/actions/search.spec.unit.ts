@@ -1,5 +1,5 @@
-import { describe, it, expect, vi, beforeEach } from "vitest";
-import { InmapClass, mapOperations } from "../../lib/InmapClass/index";
+import { describe, it, expect, beforeEach } from "vitest";
+import { InmapClass } from "../../lib/InmapClass/index";
 
 describe("InmapClass", () => {
   let inmap: InmapClass;

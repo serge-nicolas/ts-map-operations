@@ -2,11 +2,15 @@
   "name": "app-dbinset",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "lib/index.ts",
+  "engines": {
+    "node": "22.17.1",
+    "pnpm": "10.28.1"
+  },
   "scripts": {
     "test": "vitest",
     "test:browser": "vitest --browser",
-    "build": "tsc && vite build",
+    "build": "tsc --project tsconfig.json --outDir dist",
     "preview": "vite preview"
   },
   "keywords": [],

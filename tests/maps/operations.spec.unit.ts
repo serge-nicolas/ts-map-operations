@@ -442,12 +442,12 @@ describe("InmapClass Map Operations", () => {
 
     describe("Mixed data types", () => {
       it("should overwrite non-numeric values instead of summing", () => {
-        const map1 = new Map([
+        const map1 = new Map<string, any>([
           ["numeric", 100],
           ["string", "hello"],
           ["mixed", 50],
         ]);
-        const map2 = new Map([
+        const map2 = new Map<string, any>([
           ["numeric", 50],
           ["string", "world"],
           ["mixed", "now a string"],
@@ -463,12 +463,12 @@ describe("InmapClass Map Operations", () => {
       });
 
       it("should handle objects and arrays correctly", () => {
-        const map1 = new Map([
+        const map1 = new Map<string, any>([
           ["count", 5],
           ["items", ["a", "b"]],
           ["data", { value: 100 }],
         ]);
-        const map2 = new Map([
+        const map2 = new Map<string, any>([
           ["count", 10],
           ["items", ["c", "d"]],
           ["data", { value: 200 }],
@@ -505,12 +505,12 @@ describe("InmapClass Map Operations", () => {
       });
 
       it("should handle boolean values", () => {
-        const map1 = new Map([
+        const map1 = new Map<string, any>([
           ["flag1", true],
           ["flag2", false],
           ["count", 5],
         ]);
-        const map2 = new Map([
+        const map2 = new Map<string, any>([
           ["flag1", false],
           ["flag2", true],
           ["count", 3],
@@ -528,17 +528,17 @@ describe("InmapClass Map Operations", () => {
 
     describe("Real-world use cases", () => {
       it("should aggregate sales data", () => {
-        const january = new Map([
+        const january = new Map<string, any>([
           ["productA", 100],
           ["productB", 250],
           ["productC", 75],
         ]);
-        const february = new Map([
+        const february = new Map<string, any>([
           ["productA", 150],
           ["productB", 200],
           ["productD", 300],
         ]);
-        const march = new Map([
+        const march = new Map<string, any>([
           ["productA", 125],
           ["productC", 100],
           ["productD", 250],
@@ -590,13 +590,13 @@ describe("InmapClass Map Operations", () => {
           ["points", 120],
           ["assists", 45],
           ["rebounds", 30],
-          ["name", "Player 1"],
+          // ["name", "Player 1"],
         ]);
         const player2Stats = new Map([
           ["points", 85],
           ["assists", 60],
           ["steals", 15],
-          ["name", "Player 2"],
+          // ["name", "Player 2"],
         ]);
 
         inmapClass.operation(

@@ -1,6 +1,6 @@
 export const call =
   (name: string) =>
-  (target: any, propertyKey: string, descriptor: PropertyDescriptor) => {
+  (_: any, propertyKey: string, descriptor: PropertyDescriptor) => {
     // Store the original method
     const originalMethod = descriptor.value;
 

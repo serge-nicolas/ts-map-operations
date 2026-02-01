@@ -1,4 +1,3 @@
-import { dump } from "../decorators/dump";
 import { call } from "../decorators/call";
 
 export enum NumberOperations {
@@ -58,7 +57,7 @@ export class InmapClass {
         this.operationConcat(key, value as string);
         break;
       case StringOperations.replace:
-        this.operationReplace(key, value as string);
+        this.operationReplace(key, "", value as string);
         break;
       case mapOperations.merge:
         this.operationMerge(key, value as Map<string, any>);
@@ -233,6 +232,11 @@ export class InmapClass {
     }
 
     this.inMap.set(key, mergedMap);
+    return this.inMap;
+  }
+
+  set(key: string, value: any): Map<string, any> {
+    this.inMap.set(key, value);
     return this.inMap;
   }
 
